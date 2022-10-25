@@ -1,0 +1,371 @@
+:root {
+    --cor-pergunta: rgb(102, 60, 170);
+    --cor-texto: rgb(137, 112, 177);
+    --cor-alternativa: rgb(218, 220, 255);
+    --cor-bg-alternativa: rgb(3, 16, 133);
+    --cor-alt-hover: #0e21cd;
+    --cor-alt-click: rgb(97, 1, 252);
+    --cor-bg-pontuacao: rgb(86, 4, 242);
+
+    --pct-pgrss-bar: 0%;
+}
+
+.qst_questLyt {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.8s ease-out;
+}
+
+.qst_pergunta { 
+    font-size: 1.5rem;
+    color: var(--cor-pergunta);
+    margin-bottom: 2.5rem;
+}
+
+.qst_alternativaLyt {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qst_alternativaLyt button {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+
+    color: var(--cor-alternativa);
+    background-color: var(--cor-bg-alternativa);
+    cursor: pointer;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    transition: 0.5s ease-out;
+}
+
+.qst_alternativaLyt button:hover {
+    background-color: var(--cor-alt-hover);
+}
+
+.qst_alternativaLyt button.clicked {
+    background-color: var(--cor-alt-click);
+}
+
+.qst_alternativaLyt button:last-child {
+    margin-bottom: 3.5rem;
+}
+
+.qst_operacoes {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qst_operacoes .qst_progress {
+    margin-left: 25%;
+    width: 50%;
+}
+
+.qst_operacoes .progress div {
+    width: var(--pct-pgrss-bar);
+}
+
+.qst_operacoes .qst_prox {
+    width: 25%;
+    padding: 0;
+
+    cursor: default;
+    color: var(--cor-alt-hover);
+    background-color: unset;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.qst_operacoes .qst_prox span {
+    font-size: 1.25rem;
+    margin-right: 0.4rem;
+    cursor: pointer;
+}
+
+.qst_operacoes .qst_prox ion-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.qst_pontuacao {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 1.5rem;
+    opacity: 0;
+
+    width: fit-content;
+    background-color: var(--cor-bg-pontuacao);
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1.5rem;
+    box-shadow: 0px 3px 7px 4px #0000003d;
+    transition: 0.8s ease-out;
+}
+
+.qst_pontuacao :nth-child(2) {
+    font-size: 2rem;
+}
+
+/*div_Msg*/
+
+.msg_lyt {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+    display: none;
+    opacity: 0;
+
+    color: var(--cor-pergunta);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.8s ease-out;
+}
+
+.msg_lyt ion-icon {
+    font-size: 5.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.msg_lyt #msg_Titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.msg_lyt.errada #msg_Titulo {
+    margin-bottom: 3.5rem;
+}
+
+.msg_lyt #msg_Subtitulo {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*div_resultado*/
+
+.div_resultado {
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rst_titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-pergunta);
+}
+
+.rst_divider {
+    width: 80%;
+    height: 3px;
+    background-color: var(--cor-alternativa);
+
+    margin: 2rem 0;
+    border-radius: 0.25rem;
+}
+
+
+.rst_acertoPontuacao {
+    width: 100%;
+
+    padding: 0 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rst_pontuacaoTitulo {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.rst_razaoResultadoLyt {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rst_razaoResultado {
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rst_razaoResultado span:nth-child(1){
+    font-size: 3.5rem;
+    height: 100%;
+
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.rst_razaoResultado span:nth-child(2){
+    font-size: 1.5rem;
+    height: 100%;
+
+    padding-right: 0.25rem;
+    text-align: right;
+}
+
+.rst_razaoResultado span:nth-child(3){
+    font-size: 1.75rem;
+    height: 100%;
+}
+
+.rst_pontuacaoLyt {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rst_pontuacao {
+    font-size: 3.5rem;
+}
+
+.rst_qstsResult {
+    width: 100%;
+
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rst_qstsLyt {
+    min-width: 250px;
+    width: 40%;
+
+    color: #fff;
+    background: var(--cor-alt-click);
+
+    padding: 1.5rem 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rst_qstsLyt ion-icon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.rst_qstsTitulo {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.rst_qstsCertasLyt,
+.rst_qstsErradasLyt {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rst_qstCerta,
+.rst_qstErrada {
+    width: 95%;
+    font-weight: 700;
+
+    padding: 1rem;
+    margin: 0.75rem 0;
+
+    border: 3px solid #fff;
+    border-radius: 0.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rst_operacoesLyt {
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rst_operacoesLyt button {
+    width: 30%;
+
+    padding: 1.25rem;
+    color: #fff;
+    background-color: var(--cor-bg-alternativa);
+
+    border: none;
+    border-radius: 1rem;
+
+    transition: 0.8s ease-out;
+}
+
+.rst_operacoesLyt button:hover {
+    background-color: var(--cor-alt-click);
+
+    border: none;
+    border-radius: 1rem;
+}
+
+.rst_operacoesLyt button:first-child {
+    margin-right: 1rem;
+}

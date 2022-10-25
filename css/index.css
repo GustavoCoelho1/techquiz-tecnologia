@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+main { 
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem;
+
+    background: rgb(0,15,124);
+    background: linear-gradient(0deg, rgba(0,15,124,1) 0%, rgba(17,20,185,1) 35%, rgba(101,0,255,1) 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+#img_QuizLogo {
+    width: 8rem;
+    margin-bottom: 0.75rem;
+    transition: 1s ease-out;
+}
+
+#img_QuizLogo.started { 
+    opacity: 0;
+    transform: translateY(-300%);   
+    width: 6.5rem;
+}
+
+#img_QuizLogo.finished { 
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 6rem;
+    transition: 0.8s ease-out;
+}
+
+.idx_quizLyt {
+    max-width: 1000px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.8s ease-out;
+}
+
+.idx_destaque {
+    font-weight: 700;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 10px white;
+
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.idx_card {
+    width: 100%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.idx_startLyt {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.idx_startLyt ion-icon{
+    font-size: 3.5rem;
+    color: var(--cor-texto);
+
+    margin-bottom: 1rem;
+}
+
+.idx_startLyt span{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--cor-texto);
+
+    margin-bottom: 3.5rem;
+}
+
+.idx_startLyt button {
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 1.25rem;
+    color: #fff;
+    letter-spacing: 1.5px;
+
+    background: linear-gradient(0deg, rgba(61,0,184,1) 0%, rgba(101,0,255,1) 100%);
+
+    padding: 1.50rem;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 1.25rem;
+
+    transition: 0.8s ease-out;
+}
+
+.idx_startLyt button:hover {
+    box-shadow: 0 0px 14px 8px #bda1f9;
+}
+
+.idx_questLyt {
+    display: none;
+
+    transition: 0.8s ease-out;
+}
